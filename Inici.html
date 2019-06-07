@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-witch, initial-scale=1">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+    
+<div class="background"> 
+<div class="nav">
+    <a class="a active" href="#">HOME</a>
+    <a class="b" href="#">ABOUT ME</a>
+    <a class="c" href="#">GALLERY</a>
+    <a class="d" href="#">CONTACT</a>
+      
+</div>
+
+<div class="content">
+    <div class="home">
+        <h1>Juan Cruz</h1>
+        <h3>Estudiante</h3>     
+    </div>
+    
+    <div class="aboutme">
+        <p><b>Bienvenidos</b>,<br> Soy un joven estudiante de Animación 2D, 3D, videojuegos y entornos virtuales. Decidí estudiar esto por la libertad artística que te ofrecen las aplicaciones y por el cariño especial que siento por los videojuegos desde que tengo uso de razon. <br> Una de mis metas en el ámbito profesional es llegar a ser "BetaTester" ya que al largo de los años he tenido la oportunidad de probar todo tipo de consolas con una variedad de juegos bastante extensa. <br> Me gusta trabajar en equipo ya que me considero una persona con iniciativa y que presta su ayuda sin importar el inconveniente.<br>
+         Mis pasatiempos principales son la guitarra, los libros de terror y la fotografia. </p>   
+        
+    </div>
+    
+    <div class="gallery">
+       
+        <div class="image">
+            <img src="images/WhatsApp%20Image%202019-06-05%20at%2018.29.51.jpeg">
+            
+        </div>
+        <div class="image">
+            <img src="/Index/images/caballo.jpeg">
+            
+        </div>
+        <div class="image">
+            <img src="/Index/images/cuerda.jpeg">
+            
+        </div>
+        <div class="image">
+            <img src="/Index/images/Espada.jpeg">
+            
+        </div>
+        <div class="image">
+            <img src="/Index/images/portada.jpeg">
+            
+        </div>
+        <div class="image">
+            <img src="/Index/images/caratapada.jpeg">
+            
+        </div>
+        <div class="image">
+            <img src="/Index/images/color.jpeg">
+            
+        </div>
+        
+        <div class="image">
+            <img src="/Index/images/paisaje%20Juan.jpg">
+            
+            
+        </div>
+        
+        <div class="image">
+            <img src="/Index/images/radio_Juan.jpg">
+            
+            
+        </div>
+        
+        <div class="image">
+            <img src="/Index/images/abecedario.jpg">
+            
+        </div>
+    
+        <video controls width="100%" height="500">
+           
+           <source src="../Index/images/FINAAAL.mp4" type="video/mp4">
+           <source src="../Index/images/FINAAAL.webm" type="video/webm">
+            
+        </video>
+    </div>
+    
+        <div class="contact">
+        <div class="contactform">
+            <form action="Inici.html" method="post">
+                <input type="text" name="inputtext" value="First Name" id="Firstname"><br><br><br>
+                <input type="text" name="inputtext" value="Last Name" id="Lastname"><br><br><br>
+                <input type="text" name="inputtext" value="Your E-mail" id=YourE-mail><br><br><br>
+                <textarea  class="inputmessages" style="height: 300px">Your Messages...</textarea><br>
+                <input type="button" name="" class="submitbutton" value="Submit">
+            </form>
+        </div>
+        
+        
+   </div>
+   
+   
+    
+</div>
+
+</div>
+
+<script type="text/javascript" src="js/jquery-3.4.1.min..js"></script>
+<script type="text/javascript">
+    
+    $(document).ready(function(){
+        $('a'). click(function(){
+            //alert("im a click");
+            var selected = $(this);
+            $('a').removeClass ('active');
+            $(selected).addClass ('active');
+        });
+        
+        var $a = $('.a'),
+        $b = $('.b'),
+        $c = $('.c'),
+        $d = $('.d'),
+        $home = $('.home'),
+        $aboutme = $('.aboutme'),
+        $gallery = $('.gallery'),
+        $contact = $('.contact');    
+        
+        
+        $a.click(function(){
+           $home.fadeIn();
+            $aboutme.fadeOut();
+            $gallery.fadeOut();
+            $contact.fadeOut();
+            
+        
+        });
+        $b.click(function(){
+            $aboutme.fadeIn();
+            $home.fadeOut();
+            $gallery.fadeOut();
+            $contact.fadeOut();
+            
+        });
+        $c.click(function(){
+            $gallery.fadeIn();
+            $home.fadeOut();
+            $contact.fadeOut();
+            $aboutme.fadeOut();
+            
+            
+        });$d.click(function(){
+            $contact.fadeIn();
+            $home.fadeOut();
+            $gallery.fadeOut();
+            $aboutme.fadeOut();
+        });
+        
+    });
+    
+    </script>
+
+</body>
+</html>
